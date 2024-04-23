@@ -4,7 +4,6 @@ const dbConnect = require("./config/dbConnect");
 const {notFound, errorHandler} = require("./middlewares/errorHandler");
 const app = express();
 const dotenv = require("dotenv").config();
-//const PORT = 3300;
 const PORT = process.env.PORT;
 const AdminUserRouter = require("./routes/AdminUserRoute");
 const JobRouter = require("./routes/JobsRoute");
