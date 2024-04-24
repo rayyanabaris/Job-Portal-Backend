@@ -1,8 +1,8 @@
 const candidate = require("../models/CandidateModel");
 const asyncHandler = require("express-async-handler");
-const {cloudinaryUpload, cloudinaryDelete} = require("../utils/cloudinary");
-const path = require('path');
-__dirname = path.resolve(path.dirname(__filename), "../");
+//const {cloudinaryUpload, cloudinaryDelete} = require("../utils/cloudinary");
+//const path = require('path');
+//__dirname = path.resolve(path.dirname(__filename), "../");
 
 const getcandidateList = asyncHandler(async (req, res) => {
   try {
