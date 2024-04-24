@@ -55,11 +55,6 @@ const getfiltercandidateList = asyncHandler(async (req, res) => {
 });
 const addcandidate = asyncHandler(async (req, res) => {
   try {
-    console.log("1 step ahead");
-    req.body.url = await cloudinaryUpload(
-      __dirname + "/uploads/" + req.file.filename,
-    )
-    console.log(req.body.url);
     const candidates = await candidate.create(req.body);
     res.json(candidates);
   } catch (error) {
