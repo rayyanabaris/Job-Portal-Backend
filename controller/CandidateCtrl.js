@@ -45,9 +45,9 @@ const getcandidateById = asyncHandler(async (req, res) => {
 });
 const getfiltercandidateList = asyncHandler(async (req, res) => {
   try {
-    const getacandidate = await candidate.find(req.body);
-    // .populate("job_category")
-    // .populate("location");
+    const getacandidate = await candidate.find(req.body)
+    .populate("job_category")
+    .populate("location");
     res.json(getacandidate);
   } catch (error) {
     throw new Error(error);
